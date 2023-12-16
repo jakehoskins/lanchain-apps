@@ -3,7 +3,7 @@ from fastapi.responses import RedirectResponse
 from langserve import add_routes
 from pirate_speak.chain import chain as pirate_speak_chain
 from rag_elasticsearch import chain as rag_elasticsearch_chain
-
+from pii_protected_chatbot.chain import chain as pii_protected_chatbot_chain
 
 app = FastAPI()
 
@@ -16,7 +16,7 @@ async def redirect_root_to_docs():
 
 # Edit this to add the chain you want to add
 add_routes(app, pirate_speak_chain, path="/pirate-speak")
-
+add_routes(app, pii_protected_chatbot_chain, path="/pii_protected_chatbot")
 add_routes(app, rag_elasticsearch_chain, path="/rag-elasticsearch")
 
 

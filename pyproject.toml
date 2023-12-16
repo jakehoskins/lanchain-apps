@@ -15,6 +15,7 @@ langserve = {extras = ["server"], version = ">=0.0.30"}
 pydantic = "<2"
 pirate-speak = {path = "packages/pirate-speak", develop = true}
 rag-elasticsearch = {path = "packages/rag-elasticsearch", develop = true}
+pii_protected_chatbot = {path = "packages/pii_protected_chatbot", develop = true}
 
 
 [tool.poetry.group.dev.dependencies]
